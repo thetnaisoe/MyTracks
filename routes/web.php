@@ -14,13 +14,10 @@ use App\Http\Controllers\ProjectController; // add this line to import the Proje
 |
 */
 
-Route::get('/', function () {
-    $noProjects = 46;
-    return view('main', [
-        'numberOfProjects' => $noProjects,
-    ]); // it will look for main.blade.php file in resources/views folder
-});
+Route::get('/', [ProjectController::class, 'show']);
 
 Route::get('/projects', [ProjectController::class, 'list']);
 
-Route::get('/create', [ProjectController::class, 'create']);
+Route::get('/create', [ProjectController::class, 'create']); // getting data from database
+
+Route::post('/create', [ProjectController::class, 'store']); // sending data to database
