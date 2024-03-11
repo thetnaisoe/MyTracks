@@ -17,7 +17,9 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "name" => "new name",
+            "description" => "new description",
+            "image_url" => "new url",
         ];
     }
 }
