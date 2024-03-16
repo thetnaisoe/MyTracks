@@ -18,6 +18,13 @@ Route::get('/', [ProjectController::class, 'show']);
 
 Route::get('/projects', [ProjectController::class, 'list']);
 
-Route::get('/create', [ProjectController::class, 'create']); // getting data from database
+Route::get('/projects/create', [ProjectController::class, 'create']); // getting data from database
+Route::post('/projects/create', [ProjectController::class, 'store']); // sending data to database
 
-Route::post('/create', [ProjectController::class, 'store']); // sending data to database
+Route::get('/projects/{id}', [ProjectController::class, 'detail']);
+
+//be sure not to write like this {$id}
+Route::get('/projects/{id}/edit', [ProjectController::class, 'edit']); // getting data from database
+Route::post('/projects/{id}/edit', [ProjectController::class, 'update']); // sending data to database
+
+Route::post('/projects/{id}/delete', [ProjectController::class, 'delete']); // getting data from database
