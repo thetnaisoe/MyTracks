@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
 
-    <title>Music project</title>
+  <title>Music project</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">

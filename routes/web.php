@@ -28,3 +28,4 @@ Route::get('/projects/{id}/edit', [ProjectController::class, 'edit']); // gettin
 Route::post('/projects/{id}/edit', [ProjectController::class, 'update']); // sending data to database
 
 Route::post('/projects/{id}/delete', [ProjectController::class, 'delete']); // getting data from database
+
